@@ -703,7 +703,6 @@ AbilitySystemComponent->GetSpawnedAttributes_Mutable().Remove(WeaponAttributeSet
 AbilitySystemComponent->ForceReplication();
 ```
 <a name="concepts-as-design-itemattributes"></a>
-##### 4.4.2.3 物品属性（武器弹药）
 有几种方法可以实现带有 `Attributes` 的可装备物品（如武器弹药、盔甲耐久度等）。所有这些方法都是直接在物品上存储数值。这对于在其生命周期中
 可能被多个玩家装备的物品来说是必要的。
 
@@ -734,7 +733,6 @@ void AGSWeapon::PreReplication(IRepChangedPropertyTracker& ChangedPropertyTracke
 ```
 
 优势:
-1. 避免使用 `AttributeSets` 的限制（见下文）
 
 局限:
 1. 无法使用现有的 `GameplayEffect` 工作流程（如用于消耗弹药的Cost等）
